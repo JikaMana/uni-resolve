@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![alt UniResolve](public/icons/logo.svg) UniResolve
 
-## Getting Started
+Efficiency in Resolution, Transparency in Progress.
 
-First, run the development server:
+UniResolve is a centralized, student-led reporting and tracking portal designed to bridge the communication gap between university residents and campus management. By digitizing the reporting of infrastructure, academic, and safety issues, UniResolve ensures that student concerns are heard, tracked, and resolved in a data-driven manner.
 
-```bash
+🌟 Vision
+
+Traditional university reporting is often slow, manual, and lacks transparency. UniResolve replaces paper-based complaints with a streamlined digital workflow, providing students with a "World-Class" interface to monitor the lifecycle of their reports from submission to resolution.
+
+🚀 Key Features
+
+Categorized Reporting: Specific channels for Water, Electricity, Academic grievances, and Security issues.
+
+Dynamic Status Tracking: Real-time visibility into whether a report is Pending, In Progress, or Resolved.
+
+Urgency Matrix: A priority-based system (Low, Medium, High, Emergency) to ensure critical campus failures (e.g., medical emergencies or major floods) are addressed immediately.
+
+Analytics & Trends: Integrated with PostHog to track navigation flow and identify high-frequency problem zones on campus.
+
+Mobile-First Design: Fully responsive UI built for students who need to report issues quickly while on the move.
+
+🛠️ Technical Stack
+
+Frontend: Next.js 16 (utilizing Turbopack for high-speed development)
+
+Language: TypeScript for type-safe, scalable code.
+
+Styling: Tailwind CSS for a modern, professional aesthetic.
+
+Analytics: PostHog for behavioral tracking and funnel conversion monitoring.
+
+Architecture: Modular component-based structure following the latest Next.js App Router patterns.
+
+📂 Project Structure
+
+├── app/ # Next.js App Router (Pages & Layouts)
+├── components/ # UI Components (ReportCard, Navbar, ExploreBtn)
+├── lib/ # Logic & Configuration
+│ ├── constants/ # Professional Mock Data & Report Items
+│ └── database/ # Mongoose Models (Coming Soon)
+├── public/ # Static assets (Dark Green Logo, Icons)
+└── .env # Environment Configuration
+
+⚙️ Setup & Installation
+
+Clone the repository:
+
+git clone [https://github.com/your-username/uniresolve.git](https://github.com/your-username/uniresolve.git)
+cd uniresolve
+
+Install dependencies:
+
+npm install
+
+Configure Environment Variables:
+Create a .env.local file in the root directory:
+
+NEXT_PUBLIC_POSTHOG_KEY=your_ph_project_key
+NEXT_PUBLIC_POSTHOG_HOST=[https://us.i.posthog.com](https://us.i.posthog.com)
+
+Run the Development Server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📊 The Resolution Workflow
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Student Reports: An issue is filed with a specific location (e.g., Hostel Block B) and urgency level.
 
-## Learn More
+PostHog Analysis: The system captures the "Explore" and "Report" events to measure platform engagement.
 
-To learn more about Next.js, take a look at the following resources:
+Management Review: Admins update the status from Pending to In Progress.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Final Resolution: Once the repair is done, the status is marked Resolved, updating the student's dashboard.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🤝 Contribution & Feedback
 
-## Deploy on Vercel
+UniResolve is an evolving project aimed at improving campus life. Contributions, issues, and feature requests are welcome.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Developed as part of the Dev Event Series - Transforming University Administration through Technology.
