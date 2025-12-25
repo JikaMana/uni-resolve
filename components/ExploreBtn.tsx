@@ -1,5 +1,6 @@
 'use client';
 
+import { ArrowDown } from 'lucide-react';
 import Image from 'next/image';
 import posthog from 'posthog-js';
 
@@ -16,16 +17,13 @@ const ExploreBtn = () => {
     <button
       type="button"
       id="explore-btn"
-      className="mt-7 mx-auto"
+      className="mx-auto border-gray-200 bg-white w-fit cursor-pointer rounded-full border px-8 py-3.5 max-sm:w-full text-center hover:bg-green-50"
       onClick={handleExploreClick}>
-      <a href="#reports">
+      <a
+        href="#recent-issues"
+        className="flex-center gap-2 text-center w-full text-green-700 font-medium">
         View Reports
-        <Image
-          src="/icons/arrow-down.svg"
-          alt="arrow-down"
-          width={24}
-          height={24}
-        />
+        <ArrowDown />
       </a>
     </button>
   );
