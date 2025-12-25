@@ -23,7 +23,7 @@ const ResolutionSchema = new Schema<IResolution>(
 );
 
 // Index for fast lookup of resolutions by issue
-ResolutionSchema.index({ issueId: 1 });
+// ResolutionSchema.index({ issueId: 1 });
 
 const Resolution =
   models.Resolution || model<IResolution>('Resolution', ResolutionSchema);

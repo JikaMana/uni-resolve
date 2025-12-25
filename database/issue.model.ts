@@ -6,10 +6,10 @@ export interface IIssue extends Document {
   description: string;
   location: string;
   category: 'infrastructure' | 'security' | 'academic' | 'health';
-  priority: 'low' | 'medium' | 'high';
+  priority: 'Low' | 'Medium' | 'High' | 'Emergency';
   status: 'open' | 'in-progress' | 'resolved' | 'closed';
   reporter: Schema.Types.ObjectId;
-  images?: string[];
+  image?: string[];
 }
 
 const IssueSchema = new Schema<IIssue>(
@@ -25,8 +25,8 @@ const IssueSchema = new Schema<IIssue>(
     },
     priority: {
       type: String,
-      enum: ['low', 'medium', 'high'],
-      default: 'medium',
+      enum: ['Low', 'Medium', 'High', 'Emergency'],
+      default: 'Medium',
     },
     status: {
       type: String,
@@ -34,7 +34,7 @@ const IssueSchema = new Schema<IIssue>(
       default: 'open',
     },
     reporter: { type: Schema.Types.ObjectId, ref: 'User', required: true },
-    images: [{ type: String }],
+    image: { type: String },
   },
   { timestamps: true }
 );

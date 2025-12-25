@@ -1,4 +1,4 @@
-![alt UniResolve](public/icons/logo.svg) UniResolve
+UniResolve
 
 Efficiency in Resolution, Transparency in Progress.
 

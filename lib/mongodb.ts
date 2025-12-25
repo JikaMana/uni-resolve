@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { constants } from 'node:buffer';
+import mongoose from 'mongoose';
 
 // Define the connection cache type
 type MongooseCache = {
